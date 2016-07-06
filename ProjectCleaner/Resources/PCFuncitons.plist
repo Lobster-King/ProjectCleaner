@@ -2,14 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>FunctionNames</key>
+	<key>PCCleanCmdNameList</key>
 	<array>
 		<string>Find Unused Pics</string>
 		<string>Compress Pics</string>
 		<string>Delete Resources</string>
 		<string>Sort Resources</string>
-		<string>Rename Resources</string>
-		<string>Show Documents Path</string>
+	</array>
+	<key>PCUtilityCmdNameList</key>
+	<array>
+		<string>Go Document Directory</string>
+		<string>Go DriveData Directory</string>
+		<string>Delete DriveData Files</string>
 	</array>
 </dict>
 </plist>

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 
-@interface PCMainTableViewDelegate : NSObject
+@interface PCMainTableViewDelegate : NSObject<NSTableViewDelegate,NSTableViewDataSource>
 
 @property (nonatomic, retain)id tableViewOwner;
 

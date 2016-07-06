@@ -9,7 +9,7 @@
 #import "PCMainTableViewDelegate.h"
 #import "ProjectCleaner.h"
 
-@interface PCMainTableViewDelegate()<NSTableViewDelegate,NSTableViewDataSource>
+@interface PCMainTableViewDelegate()
 
 @property (nonatomic, retain)NSMutableArray *dataSource;
 
@@ -47,7 +47,7 @@
 - (NSMutableArray *)dataSource{
     if (!_dataSource) {
         NSDictionary *functionsName = [NSDictionary dictionaryWithContentsOfFile:[[ProjectCleaner sharedPlugin].bundle pathForResource:@"PCFuncitons" ofType:@"plist"]];
-        _dataSource = [NSMutableArray arrayWithArray:functionsName[@"FunctionNames"]];
+        _dataSource = [NSMutableArray arrayWithArray:functionsName[@"PCCleanCmdNameList"]];
     }
     return _dataSource;
 }

@@ -12,6 +12,7 @@
 @interface PCMainWindowController ()
 
 @property (nonatomic, retain)PCMainTableViewDelegate *tableViewDelegate;
+@property (assign)IBOutlet NSTableView *mainTableView;
 
 @end
 
@@ -27,6 +28,11 @@
 
 - (void)windowDidLoad {
     [super windowDidLoad];
+    self.mainTableView.headerView = nil;
+    self.mainTableView.delegate = self.tableViewDelegate;
+    self.mainTableView.dataSource = self.tableViewDelegate;
+    self.tableViewDelegate.tableViewOwner = self;
+    [self.mainTableView reloadData];
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 
