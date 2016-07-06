@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		641D888B1D2CB5C200CA5965 /* ProjectCleaner.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 641D888A1D2CB5C200CA5965 /* ProjectCleaner.xcscheme */; };
 		641D888E1D2CB5C200CA5965 /* ProjectCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D888D1D2CB5C200CA5965 /* ProjectCleaner.m */; };
+		641D88A41D2CBF0800CA5965 /* PCMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D88A21D2CBF0800CA5965 /* PCMainWindowController.m */; };
+		641D88A51D2CBF0800CA5965 /* PCMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 641D88A31D2CBF0800CA5965 /* PCMainWindowController.xib */; };
+		648088821D2CD2730045793A /* PCMainTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 648088811D2CD2730045793A /* PCMainTableViewDelegate.m */; };
+		648088881D2CE6CF0045793A /* PCFuncitons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 648088871D2CE6CF0045793A /* PCFuncitons.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +21,13 @@
 		641D888C1D2CB5C200CA5965 /* ProjectCleaner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectCleaner.h; sourceTree = "<group>"; };
 		641D888D1D2CB5C200CA5965 /* ProjectCleaner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectCleaner.m; sourceTree = "<group>"; };
 		641D888F1D2CB5C200CA5965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		641D88A11D2CBF0800CA5965 /* PCMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMainWindowController.h; sourceTree = "<group>"; };
+		641D88A21D2CBF0800CA5965 /* PCMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMainWindowController.m; sourceTree = "<group>"; };
+		641D88A31D2CBF0800CA5965 /* PCMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCMainWindowController.xib; sourceTree = "<group>"; };
+		648088801D2CD2730045793A /* PCMainTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMainTableViewDelegate.h; sourceTree = "<group>"; };
+		648088811D2CD2730045793A /* PCMainTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMainTableViewDelegate.m; sourceTree = "<group>"; };
+		648088851D2CD4450045793A /* PCDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDefines.h; sourceTree = "<group>"; };
+		648088871D2CE6CF0045793A /* PCFuncitons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PCFuncitons.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -39,6 +50,12 @@
 		641D88881D2CB5C200CA5965 /* ProjectCleaner */ = {
 			isa = PBXGroup;
 			children = (
+				648088861D2CE69E0045793A /* Resources */,
+				648088831D2CD3720045793A /* Utils */,
+				641D889E1D2CBEDA00CA5965 /* Controllers */,
+				641D889D1D2CBEDA00CA5965 /* Businesses */,
+				641D889F1D2CBEDA00CA5965 /* Models */,
+				641D88A01D2CBEDA00CA5965 /* Views */,
 				641D888C1D2CB5C200CA5965 /* ProjectCleaner.h */,
 				641D888D1D2CB5C200CA5965 /* ProjectCleaner.m */,
 				641D888F1D2CB5C200CA5965 /* Info.plist */,
@@ -53,6 +70,55 @@
 				641D888A1D2CB5C200CA5965 /* ProjectCleaner.xcscheme */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		641D889D1D2CBEDA00CA5965 /* Businesses */ = {
+			isa = PBXGroup;
+			children = (
+				648088801D2CD2730045793A /* PCMainTableViewDelegate.h */,
+				648088811D2CD2730045793A /* PCMainTableViewDelegate.m */,
+			);
+			path = Businesses;
+			sourceTree = "<group>";
+		};
+		641D889E1D2CBEDA00CA5965 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				641D88A11D2CBF0800CA5965 /* PCMainWindowController.h */,
+				641D88A21D2CBF0800CA5965 /* PCMainWindowController.m */,
+				641D88A31D2CBF0800CA5965 /* PCMainWindowController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		641D889F1D2CBEDA00CA5965 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		641D88A01D2CBEDA00CA5965 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		648088831D2CD3720045793A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				648088851D2CD4450045793A /* PCDefines.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		648088861D2CE69E0045793A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				648088871D2CE6CF0045793A /* PCFuncitons.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,7 +176,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				648088881D2CE6CF0045793A /* PCFuncitons.plist in Resources */,
 				641D888B1D2CB5C200CA5965 /* ProjectCleaner.xcscheme in Resources */,
+				641D88A51D2CBF0800CA5965 /* PCMainWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				641D888E1D2CB5C200CA5965 /* ProjectCleaner.m in Sources */,
+				641D88A41D2CBF0800CA5965 /* PCMainWindowController.m in Sources */,
+				648088821D2CD2730045793A /* PCMainTableViewDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +326,7 @@
 				641D88941D2CB5C200CA5965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

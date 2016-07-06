@@ -7,8 +7,15 @@
 //
 
 #import "ProjectCleaner.h"
+#import "PCMainWindowController.h"
 
 static ProjectCleaner *sharedPlugin;
+
+@interface ProjectCleaner()
+
+@property (nonatomic, retain)PCMainWindowController *mainWindow;
+
+@end
 
 @implementation ProjectCleaner
 
@@ -65,10 +72,10 @@ static ProjectCleaner *sharedPlugin;
 {
     // Create menu items, initialize UI, etc.
     // Sample Menu Item:
-    NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
+    NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Window"];
     if (menuItem) {
         [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action" action:@selector(doMenuAction) keyEquivalent:@""];
+        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Project Cleaner" action:@selector(showMainWindow) keyEquivalent:@""];
         //[actionMenuItem setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
         [actionMenuItem setTarget:self];
         [[menuItem submenu] addItem:actionMenuItem];
@@ -78,12 +85,16 @@ static ProjectCleaner *sharedPlugin;
     }
 }
 
-// Sample Action, for menu item:
-- (void)doMenuAction
-{
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"Hello, World"];
-    [alert runModal];
+- (void)showMainWindow{
+    [[self.mainWindow window] makeKeyAndOrderFront:self.mainWindow];
+}
+
+#pragma mark-- Getters & Setters--
+- (PCMainWindowController *)mainWindow{
+    if (!_mainWindow) {
+        _mainWindow = [PCMainWindowController new];
+    }
+    return _mainWindow;
 }
 
 @end

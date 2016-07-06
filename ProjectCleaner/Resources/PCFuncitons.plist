@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FunctionNames</key>
+	<array>
+		<string>Find Unused Pics</string>
+		<string>Compress Pics</string>
+		<string>Delete Resources</string>
+		<string>Sort Resources</string>
+		<string>Rename Resources</string>
+		<string>Show Documents Path</string>
+	</array>
+</dict>
+</plist>
