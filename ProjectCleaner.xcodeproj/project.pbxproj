@@ -13,6 +13,7 @@
 		641D88A51D2CBF0800CA5965 /* PCMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 641D88A31D2CBF0800CA5965 /* PCMainWindowController.xib */; };
 		648088821D2CD2730045793A /* PCMainTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 648088811D2CD2730045793A /* PCMainTableViewDelegate.m */; };
 		648088881D2CE6CF0045793A /* PCFuncitons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 648088871D2CE6CF0045793A /* PCFuncitons.plist */; };
+		BAC50EC11D2D51E2006ACD85 /* PCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC50EC01D2D51E2006ACD85 /* PCUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		648088811D2CD2730045793A /* PCMainTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMainTableViewDelegate.m; sourceTree = "<group>"; };
 		648088851D2CD4450045793A /* PCDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDefines.h; sourceTree = "<group>"; };
 		648088871D2CE6CF0045793A /* PCFuncitons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PCFuncitons.plist; sourceTree = "<group>"; };
+		BAC50EBF1D2D51E2006ACD85 /* PCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCUtils.h; sourceTree = "<group>"; };
+		BAC50EC01D2D51E2006ACD85 /* PCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -109,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				648088851D2CD4450045793A /* PCDefines.h */,
+				BAC50EBF1D2D51E2006ACD85 /* PCUtils.h */,
+				BAC50EC01D2D51E2006ACD85 /* PCUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC50EC11D2D51E2006ACD85 /* PCUtils.m in Sources */,
 				641D888E1D2CB5C200CA5965 /* ProjectCleaner.m in Sources */,
 				641D88A41D2CBF0800CA5965 /* PCMainWindowController.m in Sources */,
 				648088821D2CD2730045793A /* PCMainTableViewDelegate.m in Sources */,

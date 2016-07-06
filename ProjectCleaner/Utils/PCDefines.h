@@ -9,8 +9,11 @@
 #ifndef PCDefines_h
 #define PCDefines_h
 
-typedef NS_ENUM(NSInterger,PCStatusMachine) {
-    
+typedef NS_ENUM(NSInterger,PCTaskStatusMachine) {
+    PCStatusMachineTaskStart        = 0,
+    PCStatusMachineTaskExecuting    = 1,
+    PCStatusMachineTaskFinished     = 2,
+    PCStatusMachineTaskExecuteError = 3,
 };
 
 
