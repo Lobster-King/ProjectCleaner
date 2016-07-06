@@ -1,0 +1,263 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		641D888B1D2CB5C200CA5965 /* ProjectCleaner.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 641D888A1D2CB5C200CA5965 /* ProjectCleaner.xcscheme */; };
+		641D888E1D2CB5C200CA5965 /* ProjectCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D888D1D2CB5C200CA5965 /* ProjectCleaner.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		641D88861D2CB5C200CA5965 /* ProjectCleaner.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectCleaner.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		641D888A1D2CB5C200CA5965 /* ProjectCleaner.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ProjectCleaner.xcscheme; path = ProjectCleaner.xcodeproj/xcshareddata/xcschemes/ProjectCleaner.xcscheme; sourceTree = SOURCE_ROOT; };
+		641D888C1D2CB5C200CA5965 /* ProjectCleaner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectCleaner.h; sourceTree = "<group>"; };
+		641D888D1D2CB5C200CA5965 /* ProjectCleaner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectCleaner.m; sourceTree = "<group>"; };
+		641D888F1D2CB5C200CA5965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		641D887E1D2CB5C200CA5965 = {
+			isa = PBXGroup;
+			children = (
+				641D88881D2CB5C200CA5965 /* ProjectCleaner */,
+				641D88871D2CB5C200CA5965 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		641D88871D2CB5C200CA5965 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				641D88861D2CB5C200CA5965 /* ProjectCleaner.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		641D88881D2CB5C200CA5965 /* ProjectCleaner */ = {
+			isa = PBXGroup;
+			children = (
+				641D888C1D2CB5C200CA5965 /* ProjectCleaner.h */,
+				641D888D1D2CB5C200CA5965 /* ProjectCleaner.m */,
+				641D888F1D2CB5C200CA5965 /* Info.plist */,
+				641D88891D2CB5C200CA5965 /* Supporting Files */,
+			);
+			path = ProjectCleaner;
+			sourceTree = "<group>";
+		};
+		641D88891D2CB5C200CA5965 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				641D888A1D2CB5C200CA5965 /* ProjectCleaner.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		641D88851D2CB5C200CA5965 /* ProjectCleaner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 641D88921D2CB5C200CA5965 /* Build configuration list for PBXNativeTarget "ProjectCleaner" */;
+			buildPhases = (
+				641D88831D2CB5C200CA5965 /* Sources */,
+				641D88841D2CB5C200CA5965 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProjectCleaner;
+			productName = ProjectCleaner;
+			productReference = 641D88861D2CB5C200CA5965 /* ProjectCleaner.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		641D887F1D2CB5C200CA5965 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = lobster;
+				TargetAttributes = {
+					641D88851D2CB5C200CA5965 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 641D88821D2CB5C200CA5965 /* Build configuration list for PBXProject "ProjectCleaner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 641D887E1D2CB5C200CA5965;
+			productRefGroup = 641D88871D2CB5C200CA5965 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				641D88851D2CB5C200CA5965 /* ProjectCleaner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		641D88841D2CB5C200CA5965 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641D888B1D2CB5C200CA5965 /* ProjectCleaner.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		641D88831D2CB5C200CA5965 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641D888E1D2CB5C200CA5965 /* ProjectCleaner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		641D88901D2CB5C200CA5965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		641D88911D2CB5C200CA5965 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		641D88931D2CB5C200CA5965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = ProjectCleaner/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lobster.ProjectCleaner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		641D88941D2CB5C200CA5965 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = ProjectCleaner/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lobster.ProjectCleaner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		641D88821D2CB5C200CA5965 /* Build configuration list for PBXProject "ProjectCleaner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				641D88901D2CB5C200CA5965 /* Debug */,
+				641D88911D2CB5C200CA5965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		641D88921D2CB5C200CA5965 /* Build configuration list for PBXNativeTarget "ProjectCleaner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				641D88931D2CB5C200CA5965 /* Debug */,
+				641D88941D2CB5C200CA5965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 641D887F1D2CB5C200CA5965 /* Project object */;
+}
