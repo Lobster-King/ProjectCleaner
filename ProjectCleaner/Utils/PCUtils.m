@@ -32,4 +32,14 @@ static NSString *const kWorkspaceWindowControllers   = @"workspaceWindowControll
     return workspacePath;
 }
 
++ (NSString *)desktopPath{
+    NSString *homePath = [[[NSProcessInfo processInfo] environment] objectForKey:@"HOME"];
+    return [homePath stringByAppendingString:@"/Desktop/"];
+}
+
++ (NSString *)timeStampString{
+    NSTimeInterval interval = [[NSDate date] timeIntervalSince1970] * 1000;
+    return [NSString stringWithFormat:@"%f",interval];
+}
+
 @end

@@ -15,4 +15,8 @@
  */
 + (NSString *)projectPath;
 
++ (NSString *)desktopPath;
+
++ (NSString *)timeStampString;
+
 @end

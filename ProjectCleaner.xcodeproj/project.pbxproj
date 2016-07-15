@@ -15,6 +15,10 @@
 		64366BE21D38E4EB000363F1 /* NSMutableString+PCSemanticParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 64366BE11D38E4EB000363F1 /* NSMutableString+PCSemanticParsing.m */; };
 		648088821D2CD2730045793A /* PCMainTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 648088811D2CD2730045793A /* PCMainTableViewDelegate.m */; };
 		648088881D2CE6CF0045793A /* PCFuncitons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 648088871D2CE6CF0045793A /* PCFuncitons.plist */; };
+		BA77315E1D39101A00464411 /* PCConsoleLogHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BA77315D1D39101A00464411 /* PCConsoleLogHandler.m */; };
+		BA7731651D392B9600464411 /* PCCommandParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7731641D392B9600464411 /* PCCommandParser.m */; };
+		BA7731671D392CBF00464411 /* PCCommands.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA7731661D392CBF00464411 /* PCCommands.plist */; };
+		BA77316A1D3935D600464411 /* PCHelpTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7731691D3935D600464411 /* PCHelpTaskExecutor.m */; };
 		BAC50EC11D2D51E2006ACD85 /* PCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC50EC01D2D51E2006ACD85 /* PCUtils.m */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,14 @@
 		648088811D2CD2730045793A /* PCMainTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMainTableViewDelegate.m; sourceTree = "<group>"; };
 		648088851D2CD4450045793A /* PCDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDefines.h; sourceTree = "<group>"; };
 		648088871D2CE6CF0045793A /* PCFuncitons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PCFuncitons.plist; sourceTree = "<group>"; };
+		BA77315C1D39101A00464411 /* PCConsoleLogHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCConsoleLogHandler.h; sourceTree = "<group>"; };
+		BA77315D1D39101A00464411 /* PCConsoleLogHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCConsoleLogHandler.m; sourceTree = "<group>"; };
+		BA7731621D39108600464411 /* PCTaskExecuteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCTaskExecuteProtocol.h; sourceTree = "<group>"; };
+		BA7731631D392B9600464411 /* PCCommandParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCommandParser.h; sourceTree = "<group>"; };
+		BA7731641D392B9600464411 /* PCCommandParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCommandParser.m; sourceTree = "<group>"; };
+		BA7731661D392CBF00464411 /* PCCommands.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PCCommands.plist; sourceTree = "<group>"; };
+		BA7731681D3935D600464411 /* PCHelpTaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHelpTaskExecutor.h; sourceTree = "<group>"; };
+		BA7731691D3935D600464411 /* PCHelpTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHelpTaskExecutor.m; sourceTree = "<group>"; };
 		BAC50EBF1D2D51E2006ACD85 /* PCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCUtils.h; sourceTree = "<group>"; };
 		BAC50EC01D2D51E2006ACD85 /* PCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +71,7 @@
 		641D88881D2CB5C200CA5965 /* ProjectCleaner */ = {
 			isa = PBXGroup;
 			children = (
+				BA7731611D39106300464411 /* Protocols */,
 				648088861D2CE69E0045793A /* Resources */,
 				648088831D2CD3720045793A /* Utils */,
 				641D889E1D2CBEDA00CA5965 /* Controllers */,
@@ -103,6 +116,12 @@
 		641D889F1D2CBEDA00CA5965 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA77315C1D39101A00464411 /* PCConsoleLogHandler.h */,
+				BA77315D1D39101A00464411 /* PCConsoleLogHandler.m */,
+				BA7731631D392B9600464411 /* PCCommandParser.h */,
+				BA7731641D392B9600464411 /* PCCommandParser.m */,
+				BA7731681D3935D600464411 /* PCHelpTaskExecutor.h */,
+				BA7731691D3935D600464411 /* PCHelpTaskExecutor.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,8 +151,17 @@
 			isa = PBXGroup;
 			children = (
 				648088871D2CE6CF0045793A /* PCFuncitons.plist */,
+				BA7731661D392CBF00464411 /* PCCommands.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BA7731611D39106300464411 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BA7731621D39108600464411 /* PCTaskExecuteProtocol.h */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +222,7 @@
 				648088881D2CE6CF0045793A /* PCFuncitons.plist in Resources */,
 				641D888B1D2CB5C200CA5965 /* ProjectCleaner.xcscheme in Resources */,
 				641D88A51D2CBF0800CA5965 /* PCMainWindowController.xib in Resources */,
+				BA7731671D392CBF00464411 /* PCCommands.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +235,11 @@
 			files = (
 				BAC50EC11D2D51E2006ACD85 /* PCUtils.m in Sources */,
 				641D888E1D2CB5C200CA5965 /* ProjectCleaner.m in Sources */,
+				BA77316A1D3935D600464411 /* PCHelpTaskExecutor.m in Sources */,
 				641D88A41D2CBF0800CA5965 /* PCMainWindowController.m in Sources */,
+				BA7731651D392B9600464411 /* PCCommandParser.m in Sources */,
 				648088821D2CD2730045793A /* PCMainTableViewDelegate.m in Sources */,
+				BA77315E1D39101A00464411 /* PCConsoleLogHandler.m in Sources */,
 				64366BE21D38E4EB000363F1 /* NSMutableString+PCSemanticParsing.m in Sources */,
 				64366BDF1D38DBC4000363F1 /* NSView+PCUserInteraction.m in Sources */,
 			);

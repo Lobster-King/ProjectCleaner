@@ -10,6 +10,8 @@
 #import "PCMainTableViewDelegate.h"
 #import "PCUtils.h"
 #import "NSView+PCUserInteraction.h"
+#import "PCConsoleLogHandler.h"
+#import "PCCommandParser.h"
 
 static NSInteger const kSearchOptionsTextFieldTag   = 50000;
 static NSInteger const kDeleteOptionsTextFieldTag   = 50001;
@@ -65,6 +67,7 @@ static NSInteger const kUnusedOptionCheckButtonTag  = 30000;
     self.searchOptionsTextField.delegate = self;
     self.deleteOptionsTextField.delegate = self;
     self.unusedOptionsTextField.delegate = self;
+    [[PCCommandParser sharedParser] consoleCmdParser:@"pc help" withConsoleLog:self.consoleLogTextView];
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 

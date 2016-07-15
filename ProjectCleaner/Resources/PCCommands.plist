@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pc help</key>
+	<dict>
+		<key>description</key>
+		<string>show pc command list</string>
+		<key>action</key>
+		<string>do nothing</string>
+		<key>executor</key>
+		<string>PCHelpTaskExecutor</string>
+	</dict>
+	<key>pc cp</key>
+	<dict>
+		<key>description</key>
+		<string>open current xcodeproj driving data directory</string>
+		<key>action</key>
+		<string>do nothing</string>
+		<key>executor</key>
+		<string></string>
+	</dict>
+	<key>pc dp</key>
+	<dict>
+		<key>description</key>
+		<string>open current xcodeproj document directory</string>
+		<key>action</key>
+		<string></string>
+		<key>executor</key>
+		<string></string>
+	</dict>
+	<key>pc cl</key>
+	<dict>
+		<key>description</key>
+		<string>clear console log window</string>
+		<key>action</key>
+		<string></string>
+		<key>executor</key>
+		<string></string>
+	</dict>
+	<key>pc cl cp</key>
+	<dict>
+		<key>description</key>
+		<string>clear current xcodeproj driving data</string>
+		<key>action</key>
+		<string></string>
+		<key>executor</key>
+		<string></string>
+	</dict>
+	<key>pc cl dp</key>
+	<dict>
+		<key>description</key>
+		<string>clear current xcodeproj document data</string>
+		<key>action</key>
+		<string></string>
+		<key>executor</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>
