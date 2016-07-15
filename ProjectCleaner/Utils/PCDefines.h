@@ -16,5 +16,4 @@ typedef NS_ENUM(NSInterger,PCTaskStatusMachine) {
     PCStatusMachineTaskExecuteError = 3,
 };
 
-
 #endif /* PCDefines_h */
