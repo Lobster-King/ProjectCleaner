@@ -75,7 +75,7 @@ static ProjectCleaner *sharedPlugin;
     NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Window"];
     if (menuItem) {
         [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Project Cleaner" action:@selector(showMainWindow) keyEquivalent:@""];
+        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"ProjectCleaner" action:@selector(showMainWindow) keyEquivalent:@""];
         //[actionMenuItem setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
         [actionMenuItem setTarget:self];
         [[menuItem submenu] addItem:actionMenuItem];
