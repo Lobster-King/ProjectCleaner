@@ -11,6 +11,8 @@
 		641D888E1D2CB5C200CA5965 /* ProjectCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D888D1D2CB5C200CA5965 /* ProjectCleaner.m */; };
 		641D88A41D2CBF0800CA5965 /* PCMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D88A21D2CBF0800CA5965 /* PCMainWindowController.m */; };
 		641D88A51D2CBF0800CA5965 /* PCMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 641D88A31D2CBF0800CA5965 /* PCMainWindowController.xib */; };
+		64366BDF1D38DBC4000363F1 /* NSView+PCUserInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 64366BDE1D38DBC4000363F1 /* NSView+PCUserInteraction.m */; };
+		64366BE21D38E4EB000363F1 /* NSMutableString+PCSemanticParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 64366BE11D38E4EB000363F1 /* NSMutableString+PCSemanticParsing.m */; };
 		648088821D2CD2730045793A /* PCMainTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 648088811D2CD2730045793A /* PCMainTableViewDelegate.m */; };
 		648088881D2CE6CF0045793A /* PCFuncitons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 648088871D2CE6CF0045793A /* PCFuncitons.plist */; };
 		BAC50EC11D2D51E2006ACD85 /* PCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC50EC01D2D51E2006ACD85 /* PCUtils.m */; };
@@ -25,6 +27,10 @@
 		641D88A11D2CBF0800CA5965 /* PCMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMainWindowController.h; sourceTree = "<group>"; };
 		641D88A21D2CBF0800CA5965 /* PCMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMainWindowController.m; sourceTree = "<group>"; };
 		641D88A31D2CBF0800CA5965 /* PCMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCMainWindowController.xib; sourceTree = "<group>"; };
+		64366BDD1D38DBC4000363F1 /* NSView+PCUserInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+PCUserInteraction.h"; sourceTree = "<group>"; };
+		64366BDE1D38DBC4000363F1 /* NSView+PCUserInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+PCUserInteraction.m"; sourceTree = "<group>"; };
+		64366BE01D38E4EB000363F1 /* NSMutableString+PCSemanticParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+PCSemanticParsing.h"; sourceTree = "<group>"; };
+		64366BE11D38E4EB000363F1 /* NSMutableString+PCSemanticParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+PCSemanticParsing.m"; sourceTree = "<group>"; };
 		648088801D2CD2730045793A /* PCMainTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMainTableViewDelegate.h; sourceTree = "<group>"; };
 		648088811D2CD2730045793A /* PCMainTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMainTableViewDelegate.m; sourceTree = "<group>"; };
 		648088851D2CD4450045793A /* PCDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDefines.h; sourceTree = "<group>"; };
@@ -114,6 +120,10 @@
 				648088851D2CD4450045793A /* PCDefines.h */,
 				BAC50EBF1D2D51E2006ACD85 /* PCUtils.h */,
 				BAC50EC01D2D51E2006ACD85 /* PCUtils.m */,
+				64366BDD1D38DBC4000363F1 /* NSView+PCUserInteraction.h */,
+				64366BDE1D38DBC4000363F1 /* NSView+PCUserInteraction.m */,
+				64366BE01D38E4EB000363F1 /* NSMutableString+PCSemanticParsing.h */,
+				64366BE11D38E4EB000363F1 /* NSMutableString+PCSemanticParsing.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -198,6 +208,8 @@
 				641D888E1D2CB5C200CA5965 /* ProjectCleaner.m in Sources */,
 				641D88A41D2CBF0800CA5965 /* PCMainWindowController.m in Sources */,
 				648088821D2CD2730045793A /* PCMainTableViewDelegate.m in Sources */,
+				64366BE21D38E4EB000363F1 /* NSMutableString+PCSemanticParsing.m in Sources */,
+				64366BDF1D38DBC4000363F1 /* NSView+PCUserInteraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
