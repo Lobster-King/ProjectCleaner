@@ -50,7 +50,9 @@ static NSString *const kKvoKeyPath   = @"status";
             break;
         }
     }
-    
+    if (!executorName) {
+        return;
+    }
     [self.operationQueue addOperationWithBlock:^{
         id <PCTaskExecuteProtocol>executor = [NSClassFromString(executorName) new];
         if ([executor respondsToSelector:@selector(executeTaskWithCmd:)]) {

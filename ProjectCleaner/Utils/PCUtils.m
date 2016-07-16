@@ -32,6 +32,18 @@ static NSString *const kWorkspaceWindowControllers   = @"workspaceWindowControll
     return workspacePath;
 }
 
++ (NSString *)projectWorkSpace{
+    NSArray *workspaceWindowControllers = [NSClassFromString(kIDEWorkspaceWindowController) valueForKey:kWorkspaceWindowControllers];
+    id workSpace;
+    for (id controller in workspaceWindowControllers) {
+        if ([[controller valueForKey:kWindow] isEqual:[NSApp keyWindow]]) {
+            workSpace = [controller valueForKey:kWorkspace];
+            break;
+        }
+    }
+    return workSpace;
+}
+
 + (NSString *)desktopPath{
     NSString *homePath = [[[NSProcessInfo processInfo] environment] objectForKey:@"HOME"];
     return [homePath stringByAppendingString:@"/Desktop/"];

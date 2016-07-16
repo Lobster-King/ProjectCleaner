@@ -190,6 +190,12 @@ static NSString *const kPcSearchCommand   = @"pc search";
 }
 
 - (BOOL)textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(nullable NSString *)replacementString{
+    if ([replacementString hasSuffix:@"\n"]) {
+        NSString *allTheText = [textView string];
+        NSArray *lines = [allTheText componentsSeparatedByString:@"\n"];
+        NSString *command = [lines lastObject];
+        [[PCCommandParser sharedParser] consoleCmdParser:command withConsoleLog:textView];
+    }
     return YES;
 }
 

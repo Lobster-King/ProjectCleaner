@@ -7,10 +7,15 @@
 //
 
 #import "PCDeleteDrivingDataTaskExecutor.h"
+#import <Cocoa/Cocoa.h>
 
 @implementation PCDeleteDrivingDataTaskExecutor
 
 - (void)executeTaskWithCmd:(NSString *)cmd, ...{
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    [[NSFileManager defaultManager] removeItemAtPath:[docDir stringByAppendingString:@"/Developer/Xcode/DerivedData/"] error:NULL];
     
 }
 

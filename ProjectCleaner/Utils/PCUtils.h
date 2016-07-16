@@ -15,6 +15,8 @@
  */
 + (NSString *)projectPath;
 
++ (id)projectWorkSpace;
+
 + (NSString *)desktopPath;
 
 + (NSString *)timeStampString;
