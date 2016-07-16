@@ -18,6 +18,11 @@
 		BA35540F1D39DFCE00E2DB04 /* PCDeleteTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA35540E1D39DFCE00E2DB04 /* PCDeleteTaskExecutor.m */; };
 		BA3554121D39E05D00E2DB04 /* PCSearchTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3554111D39E05D00E2DB04 /* PCSearchTaskExecutor.m */; };
 		BA3554151D39E6EB00E2DB04 /* PCTaskStatusMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3554141D39E6EB00E2DB04 /* PCTaskStatusMachine.m */; };
+		BA3554181D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3554171D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.m */; };
+		BA35541B1D39FAB100E2DB04 /* PCOpenDrivingDataTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA35541A1D39FAB100E2DB04 /* PCOpenDrivingDataTaskExecutor.m */; };
+		BA35541E1D39FAE900E2DB04 /* PCDeleteDocumentTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA35541D1D39FAE900E2DB04 /* PCDeleteDocumentTaskExecutor.m */; };
+		BA3554211D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3554201D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.m */; };
+		BA3554241D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3554231D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.m */; };
 		BA77315E1D39101A00464411 /* PCConsoleLogHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BA77315D1D39101A00464411 /* PCConsoleLogHandler.m */; };
 		BA7731651D392B9600464411 /* PCCommandParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7731641D392B9600464411 /* PCCommandParser.m */; };
 		BA7731671D392CBF00464411 /* PCCommands.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA7731661D392CBF00464411 /* PCCommands.plist */; };
@@ -48,6 +53,16 @@
 		BA3554111D39E05D00E2DB04 /* PCSearchTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCSearchTaskExecutor.m; sourceTree = "<group>"; };
 		BA3554131D39E6EB00E2DB04 /* PCTaskStatusMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCTaskStatusMachine.h; sourceTree = "<group>"; };
 		BA3554141D39E6EB00E2DB04 /* PCTaskStatusMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCTaskStatusMachine.m; sourceTree = "<group>"; };
+		BA3554161D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCOpenDocumentTaskExecutor.h; sourceTree = "<group>"; };
+		BA3554171D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCOpenDocumentTaskExecutor.m; sourceTree = "<group>"; };
+		BA3554191D39FAB100E2DB04 /* PCOpenDrivingDataTaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCOpenDrivingDataTaskExecutor.h; sourceTree = "<group>"; };
+		BA35541A1D39FAB100E2DB04 /* PCOpenDrivingDataTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCOpenDrivingDataTaskExecutor.m; sourceTree = "<group>"; };
+		BA35541C1D39FAE900E2DB04 /* PCDeleteDocumentTaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDeleteDocumentTaskExecutor.h; sourceTree = "<group>"; };
+		BA35541D1D39FAE900E2DB04 /* PCDeleteDocumentTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDeleteDocumentTaskExecutor.m; sourceTree = "<group>"; };
+		BA35541F1D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDeleteDrivingDataTaskExecutor.h; sourceTree = "<group>"; };
+		BA3554201D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDeleteDrivingDataTaskExecutor.m; sourceTree = "<group>"; };
+		BA3554221D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCClearConsoleTaskExecutor.h; sourceTree = "<group>"; };
+		BA3554231D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCClearConsoleTaskExecutor.m; sourceTree = "<group>"; };
 		BA77315C1D39101A00464411 /* PCConsoleLogHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCConsoleLogHandler.h; sourceTree = "<group>"; };
 		BA77315D1D39101A00464411 /* PCConsoleLogHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCConsoleLogHandler.m; sourceTree = "<group>"; };
 		BA7731621D39108600464411 /* PCTaskExecuteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCTaskExecuteProtocol.h; sourceTree = "<group>"; };
@@ -137,6 +152,16 @@
 				BA35540E1D39DFCE00E2DB04 /* PCDeleteTaskExecutor.m */,
 				BA3554101D39E05D00E2DB04 /* PCSearchTaskExecutor.h */,
 				BA3554111D39E05D00E2DB04 /* PCSearchTaskExecutor.m */,
+				BA3554161D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.h */,
+				BA3554171D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.m */,
+				BA3554191D39FAB100E2DB04 /* PCOpenDrivingDataTaskExecutor.h */,
+				BA35541A1D39FAB100E2DB04 /* PCOpenDrivingDataTaskExecutor.m */,
+				BA35541C1D39FAE900E2DB04 /* PCDeleteDocumentTaskExecutor.h */,
+				BA35541D1D39FAE900E2DB04 /* PCDeleteDocumentTaskExecutor.m */,
+				BA35541F1D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.h */,
+				BA3554201D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.m */,
+				BA3554221D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.h */,
+				BA3554231D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,10 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA35541B1D39FAB100E2DB04 /* PCOpenDrivingDataTaskExecutor.m in Sources */,
 				BAC50EC11D2D51E2006ACD85 /* PCUtils.m in Sources */,
 				BA3554121D39E05D00E2DB04 /* PCSearchTaskExecutor.m in Sources */,
+				BA3554211D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.m in Sources */,
+				BA3554181D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.m in Sources */,
 				641D888E1D2CB5C200CA5965 /* ProjectCleaner.m in Sources */,
+				BA35541E1D39FAE900E2DB04 /* PCDeleteDocumentTaskExecutor.m in Sources */,
 				BA77316A1D3935D600464411 /* PCHelpTaskExecutor.m in Sources */,
+				BA3554241D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.m in Sources */,
 				BA35540F1D39DFCE00E2DB04 /* PCDeleteTaskExecutor.m in Sources */,
 				641D88A41D2CBF0800CA5965 /* PCMainWindowController.m in Sources */,
 				BA7731651D392B9600464411 /* PCCommandParser.m in Sources */,

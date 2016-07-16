@@ -13,6 +13,7 @@
 
 static PCCommandParser *sharedParser = nil;
 static NSString *const kPCHelpString = @"pc help";
+static NSString *const kKvoKeyPath   = @"status";
 
 @interface PCCommandParser()
 
@@ -27,14 +28,14 @@ static NSString *const kPCHelpString = @"pc help";
 + (PCCommandParser *)sharedParser{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedParser = [[PCCommandParser alloc]init];
+        sharedParser = [PCCommandParser new];
     });
     return sharedParser;
 }
 
 - (id)init{
     if (self == [super init]) {
-        [self.statusMachine addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
+        [self.statusMachine addObserver:self forKeyPath:kKvoKeyPath options:NSKeyValueObservingOptionNew context:NULL];
     }
     return self;
 }
@@ -51,7 +52,7 @@ static NSString *const kPCHelpString = @"pc help";
     }
     
     [self.operationQueue addOperationWithBlock:^{
-        id <PCTaskExecuteProtocol>executor = [[NSClassFromString(executorName) alloc]init];
+        id <PCTaskExecuteProtocol>executor = [NSClassFromString(executorName) new];
         if ([executor respondsToSelector:@selector(executeTaskWithCmd:)]) {
             if ([cmd isEqualToString:kPCHelpString]) {
                 [executor executeTaskWithCmd:action,console,self.statusMachine,[self.cmdMap copy],nil];
@@ -64,7 +65,7 @@ static NSString *const kPCHelpString = @"pc help";
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
-    if ([keyPath isEqualToString:@"status"]) {
+    if ([keyPath isEqualToString:kKvoKeyPath]) {
         int status = [[change objectForKey:NSKeyValueChangeNewKey] intValue];
         if (_delegate && [_delegate respondsToSelector:@selector(cmdExecutingStaus:)]) {
             [_delegate cmdExecutingStaus:status];
@@ -81,7 +82,7 @@ static NSString *const kPCHelpString = @"pc help";
 
 - (NSOperationQueue *)operationQueue{
     if (!_operationQueue) {
-        _operationQueue = [[NSOperationQueue alloc]init];
+        _operationQueue = [NSOperationQueue new];
         _operationQueue.maxConcurrentOperationCount = 1;/*serial queue*/
     }
     return _operationQueue;

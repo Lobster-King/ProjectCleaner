@@ -18,7 +18,7 @@
 		<key>action</key>
 		<string>do nothing</string>
 		<key>executor</key>
-		<string></string>
+		<string>PCOpenDrivingDataTaskExecutor</string>
 	</dict>
 	<key>pc dp</key>
 	<dict>
@@ -27,7 +27,7 @@
 		<key>action</key>
 		<string></string>
 		<key>executor</key>
-		<string></string>
+		<string>PCOpenDocumentTaskExecutor</string>
 	</dict>
 	<key>pc cl</key>
 	<dict>
@@ -36,7 +36,7 @@
 		<key>action</key>
 		<string></string>
 		<key>executor</key>
-		<string></string>
+		<string>PCClearConsoleTaskExecutor</string>
 	</dict>
 	<key>pc cl cp</key>
 	<dict>
@@ -45,7 +45,7 @@
 		<key>action</key>
 		<string></string>
 		<key>executor</key>
-		<string></string>
+		<string>PCDeleteDrivingDataTaskExecutor</string>
 	</dict>
 	<key>pc cl dp</key>
 	<dict>
@@ -54,7 +54,7 @@
 		<key>action</key>
 		<string></string>
 		<key>executor</key>
-		<string></string>
+		<string>PCDeleteDocumentTaskExecutor</string>
 	</dict>
 	<key>pc delete</key>
 	<dict>

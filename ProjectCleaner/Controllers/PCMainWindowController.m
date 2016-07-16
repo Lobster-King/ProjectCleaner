@@ -25,6 +25,9 @@ static NSString *const kExecutingString   = @"exexuting";
 static NSString *const kCompletedString   = @"completed";
 static NSString *const kExecutErrorString = @"error";
 
+static NSString *const kPcDeleteCommand   = @"pc delete";
+static NSString *const kPcSearchCommand   = @"pc search";
+
 @interface PCMainWindowController ()<NSTextFieldDelegate,NSTextViewDelegate,CommandParserDelegate>
 
 @property (nonatomic, retain)PCMainTableViewDelegate *tableViewDelegate;
