@@ -8,12 +8,15 @@
 
 #import "PCHelpTaskExecutor.h"
 #import <Cocoa/Cocoa.h>
+#import "PCTaskStatusMachine.h"
 
 @implementation PCHelpTaskExecutor
 
 - (void)executeTaskWithCmd:(NSString *)cmd, ...{
+    
     NSTextView *console = nil;
     NSDictionary *cmdMap = nil;
+    PCTaskStatusMachine *task = nil;
     va_list arguments;
     va_start(arguments, cmd);
     if (cmd) {
@@ -25,11 +28,19 @@
             if ([param isKindOfClass:[NSDictionary class]]) {
                 cmdMap = param;
             }
+            if ([param isKindOfClass:[PCTaskStatusMachine class]]) {
+                task = param;
+            }
         }
     }
     va_end(arguments);
     
     /*logic*/
+    dispatch_async(dispatch_get_main_queue(), ^{
+        task.status = 0;
+    });
+    
+    
 }
 
 @end

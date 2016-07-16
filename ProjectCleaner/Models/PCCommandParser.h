@@ -7,9 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PCDefines.h"
+
+@protocol CommandParserDelegate <NSObject>
+
+- (void)cmdExecutingStaus:(PCStatusMachine)status;
+
+@end
 
 @class NSTextView;
 @interface PCCommandParser : NSObject
+
+@property (nonatomic, weak)id <CommandParserDelegate>delegate;
 
 + (PCCommandParser *)sharedParser;
 

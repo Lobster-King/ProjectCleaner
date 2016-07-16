@@ -56,5 +56,23 @@
 		<key>executor</key>
 		<string></string>
 	</dict>
+	<key>pc delete</key>
+	<dict>
+		<key>description</key>
+		<string>delete file with regular cofige</string>
+		<key>action</key>
+		<string></string>
+		<key>executor</key>
+		<string>PCDeleteTaskExecutor</string>
+	</dict>
+	<key>pc search</key>
+	<dict>
+		<key>description</key>
+		<string>find file with regular cofige</string>
+		<key>action</key>
+		<string></string>
+		<key>executor</key>
+		<string>PCSearchTaskExecutor</string>
+	</dict>
 </dict>
 </plist>

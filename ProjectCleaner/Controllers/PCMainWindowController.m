@@ -21,7 +21,11 @@ static NSInteger const kSearchOptionCheckButtonTag  = 10000;
 static NSInteger const kDeleteOptionCheckButtonTag  = 20000;
 static NSInteger const kUnusedOptionCheckButtonTag  = 30000;
 
-@interface PCMainWindowController ()<NSTextFieldDelegate,NSTextViewDelegate>
+static NSString *const kExecutingString   = @"exexuting";
+static NSString *const kCompletedString   = @"completed";
+static NSString *const kExecutErrorString = @"error";
+
+@interface PCMainWindowController ()<NSTextFieldDelegate,NSTextViewDelegate,CommandParserDelegate>
 
 @property (nonatomic, retain)PCMainTableViewDelegate *tableViewDelegate;
 
@@ -67,6 +71,7 @@ static NSInteger const kUnusedOptionCheckButtonTag  = 30000;
     self.searchOptionsTextField.delegate = self;
     self.deleteOptionsTextField.delegate = self;
     self.unusedOptionsTextField.delegate = self;
+    [PCCommandParser sharedParser].delegate = self;
     [[PCCommandParser sharedParser] consoleCmdParser:@"pc help" withConsoleLog:self.consoleLogTextView];
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
@@ -113,10 +118,43 @@ static NSInteger const kUnusedOptionCheckButtonTag  = 30000;
 }
 
 - (void)initIndicatorView{
-    
+    self.indicator.hidden = YES;
+    self.statusLabel.hidden = YES;
 }
 
 #pragma mark--Delegates & Actions--
+- (void)cmdExecutingStaus:(PCStatusMachine)status{
+    self.indicator.hidden = NO;
+    self.statusLabel.hidden = NO;
+    switch (status) {
+        case 0:
+        {
+            /*executing*/
+            [self.indicator startAnimation:nil];
+            self.statusLabel.stringValue = kExecutingString;
+        }
+            break;
+        case 1:
+        {
+            /*completed*/
+            [self.indicator stopAnimation:nil];
+            self.indicator.hidden = YES;
+            self.statusLabel.stringValue = kCompletedString;
+        }
+            break;
+        case 2:
+        {
+            /*error*/
+            [self.indicator stopAnimation:nil];
+            self.indicator.hidden = YES;
+            self.statusLabel.stringValue = kExecutErrorString;
+        }
+            break;
+        default:
+            break;
+    }
+}
+
 - (BOOL)control:(NSControl *)control textShouldBeginEditing:(NSText *)fieldEditor{
     if (control.tag == kSearchOptionsTextFieldTag) {
         [self.searchOptionsView userinteractionEnabled];
