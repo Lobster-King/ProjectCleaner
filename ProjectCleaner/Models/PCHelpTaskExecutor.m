@@ -36,10 +36,14 @@
     va_end(arguments);
     
     /*logic*/
-    dispatch_async(dispatch_get_main_queue(), ^{
-        task.status = 0;
-    });
     
+    NSString *helpString = @"";
+    for (NSString *name in [cmdMap allKeys]) {
+        helpString = [helpString stringByAppendingString:[NSString stringWithFormat:@"%@-->%@\n",name,cmdMap[name][@"description"]]];
+    }
+    if (helpString.length) {
+        console.string = [console.string stringByAppendingString:helpString];
+    }
     
 }
 

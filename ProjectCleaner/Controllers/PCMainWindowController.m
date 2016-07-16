@@ -75,7 +75,6 @@ static NSString *const kPcSearchCommand   = @"pc search";
     self.deleteOptionsTextField.delegate = self;
     self.unusedOptionsTextField.delegate = self;
     [PCCommandParser sharedParser].delegate = self;
-    [[PCCommandParser sharedParser] consoleCmdParser:@"pc help" withConsoleLog:self.consoleLogTextView];
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 
