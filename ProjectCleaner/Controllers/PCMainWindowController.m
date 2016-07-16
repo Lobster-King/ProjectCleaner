@@ -12,6 +12,7 @@
 #import "NSView+PCUserInteraction.h"
 #import "PCConsoleLogHandler.h"
 #import "PCCommandParser.h"
+#import "NSMutableString+PCSemanticParsing.h"
 
 static NSInteger const kSearchOptionsTextFieldTag   = 50000;
 static NSInteger const kDeleteOptionsTextFieldTag   = 50001;
@@ -21,7 +22,7 @@ static NSInteger const kSearchOptionCheckButtonTag  = 10000;
 static NSInteger const kDeleteOptionCheckButtonTag  = 20000;
 static NSInteger const kUnusedOptionCheckButtonTag  = 30000;
 
-static NSString *const kExecutingString   = @"exexuting";
+static NSString *const kExecutingString   = @"executing";
 static NSString *const kCompletedString   = @"completed";
 static NSString *const kExecutErrorString = @"error";
 
@@ -201,11 +202,60 @@ static NSString *const kPcSearchCommand   = @"pc search";
 - (IBAction)deleteAction:(id)sender {
     if(self.searchOptionsTextField.stringValue.length){
         [self.searchOptionsView userinteractionDisabled];
+        [PCCommandParser sharedParser].searchOptions = [[NSMutableString stringWithString:self.searchOptionsTextField.stringValue] semanticParsing];
+    }else{
+        NSMutableArray *option = [NSMutableArray array];
+        for (id obj in self.searchOptionsView.subviews) {
+            if ([obj isKindOfClass:[NSButton class]]) {
+                NSButton *button = (NSButton *)obj;
+                if (button.tag != kSearchOptionCheckButtonTag && button.state == 1) {
+                    [option addObject:button.title];
+                }
+            }
+        }
+
+        [PCCommandParser sharedParser].searchOptions = option;
     }
+    NSMutableArray *option = [NSMutableArray array];
+    for (id obj in self.deleteOptionsView.subviews) {
+        if ([obj isKindOfClass:[NSButton class]]) {
+            NSButton *button = (NSButton *)obj;
+            if (button.tag != kDeleteOptionCheckButtonTag && button.state == 1) {
+                [option addObject:button.title];
+            }
+        }
+    }
+    [PCCommandParser sharedParser].deleteOptions = [[[NSMutableString stringWithString:self.deleteOptionsTextField.stringValue] semanticParsing] arrayByAddingObjectsFromArray:option];
+    [[PCCommandParser sharedParser] consoleCmdParser:kPcDeleteCommand withConsoleLog:self.consoleLogTextView];
 }
 
 - (IBAction)searchAction:(id)sender {
-    
+    if(self.searchOptionsTextField.stringValue.length){
+        [PCCommandParser sharedParser].searchOptions = [[NSMutableString stringWithString:self.searchOptionsTextField.stringValue] semanticParsing];
+    }else{
+        NSMutableArray *option = [NSMutableArray array];
+        for (id obj in self.searchOptionsView.subviews) {
+            if ([obj isKindOfClass:[NSButton class]]) {
+                NSButton *button = (NSButton *)obj;
+                if (button.tag != kSearchOptionCheckButtonTag && button.state == 1) {
+                    [option addObject:button.title];
+                }
+            }
+        }
+        
+        [PCCommandParser sharedParser].searchOptions = option;
+    }
+    NSMutableArray *option = [NSMutableArray array];
+    for (id obj in self.unusedOptionsView.subviews) {
+        if ([obj isKindOfClass:[NSButton class]]) {
+            NSButton *button = (NSButton *)obj;
+            if (button.tag != kUnusedOptionCheckButtonTag && button.state == 1) {
+                [option addObject:button.title];
+            }
+        }
+    }
+    [PCCommandParser sharedParser].unusedOptions = [[[NSMutableString stringWithString:self.unusedOptionsTextField.stringValue] semanticParsing] arrayByAddingObjectsFromArray:option];
+    [[PCCommandParser sharedParser] consoleCmdParser:kPcSearchCommand withConsoleLog:self.consoleLogTextView];
 }
 
 - (void)searchOptionsCheckButtonAction:(NSButton *)button{

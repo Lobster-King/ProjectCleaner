@@ -11,9 +11,12 @@
 #import "PCTaskExecuteProtocol.h"
 #import "PCTaskStatusMachine.h"
 
-static PCCommandParser *sharedParser = nil;
-static NSString *const kPCHelpString = @"pc help";
-static NSString *const kKvoKeyPath   = @"status";
+static PCCommandParser *sharedParser    = nil;
+
+static NSString *const kPCHelpString    = @"pc help";
+static NSString *const kPCDeleteString  = @"pc delete";
+static NSString *const kPCSearchString  = @"pc search";
+static NSString *const kKvoKeyPath      = @"status";
 
 @interface PCCommandParser()
 
@@ -58,6 +61,14 @@ static NSString *const kKvoKeyPath   = @"status";
         if ([executor respondsToSelector:@selector(executeTaskWithCmd:)]) {
             if ([cmd isEqualToString:kPCHelpString]) {
                 [executor executeTaskWithCmd:action,console,self.statusMachine,[self.cmdMap copy],nil];
+                return;
+            }
+            if ([cmd isEqualToString:kPCDeleteString]) {
+                [executor executeTaskWithCmd:action,console,self.statusMachine,@[self.searchOptions,self.deleteOptions],nil];
+                return;
+            }
+            if ([cmd isEqualToString:kPCSearchString]) {
+                [executor executeTaskWithCmd:action,console,self.statusMachine,@[self.searchOptions,self.unusedOptions],nil];
                 return;
             }
             [executor executeTaskWithCmd:action,console,self.statusMachine,nil];
