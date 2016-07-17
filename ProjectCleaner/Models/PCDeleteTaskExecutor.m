@@ -53,11 +53,12 @@ static NSString *const kFindLaunchPath  = @"/usr/bin/find";
         task.status = 0;
     });
     NSString *path = nil;
-    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:[PCUtils currentWindowPath]];
+    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:[PCUtils projectPath]];
     while (((path = [enumerator nextObject])))
     {
+        //none retain png
         if (![path hasSuffix:@"@2x.png"] && ![path hasSuffix:@"@3x.png"]) {
-            NSString *deleteStringPath = [[PCUtils currentWindowPath] stringByAppendingString:@"/"];
+            NSString *deleteStringPath = [[PCUtils projectPath] stringByAppendingString:@"/"];
             deleteStringPath = [deleteStringPath stringByAppendingString:path];
             NSString *deleteString = [NSString stringWithFormat:@"delete-->%@\n",deleteStringPath];
             dispatch_async(dispatch_get_main_queue(), ^{
