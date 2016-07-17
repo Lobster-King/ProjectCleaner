@@ -53,15 +53,17 @@ static NSString *const kFindLaunchPath  = @"/usr/bin/find";
         task.status = 0;
     });
     NSString *path = nil;
-    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:@"/Users/lobster/Downloads/GSD_WeiXin-master"];
+    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:[PCUtils currentWindowPath]];
     while (((path = [enumerator nextObject])))
     {
-        if ([path hasSuffix:@"tx.jpeg"]) {
-            NSString *deleteStringPath = [@"/Users/lobster/Downloads/GSD_WeiXin-master/" stringByAppendingString:path];
+        if (![path hasSuffix:@"@2x.png"] && ![path hasSuffix:@"@3x.png"]) {
+            NSString *deleteStringPath = [[PCUtils currentWindowPath] stringByAppendingString:@"/"];
+            deleteStringPath = [deleteStringPath stringByAppendingString:path];
             NSString *deleteString = [NSString stringWithFormat:@"delete-->%@\n",deleteStringPath];
             dispatch_async(dispatch_get_main_queue(), ^{
-                console.string = [console.string stringByAppendingString:deleteString];
-                [console scrollLineDown:nil];
+                NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:deleteString];
+                [console.textStorage appendAttributedString:attributedString];
+                [console scrollRangeToVisible:NSMakeRange([[console string] length],0)];
             });
             [[NSFileManager defaultManager] removeItemAtPath:deleteStringPath error:NULL];
         }

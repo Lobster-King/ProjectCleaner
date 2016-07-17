@@ -51,14 +51,16 @@
         task.status = 0;
     });
     NSString *path = nil;
-    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:@"/Users/lobster/Downloads/GSD_WeiXin-master"];
+    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:[PCUtils projectPath]];
     while (((path = [enumerator nextObject])))
     {
-        NSString *searchStringPath = [@"/Users/lobster/Downloads/GSD_WeiXin-master/" stringByAppendingString:path];
-        NSString *searchString = [NSString stringWithFormat:@"delete-->%@\n",searchStringPath];
+        NSString *searchStringPath = [[PCUtils projectPath] stringByAppendingString:@"/"];
+        searchStringPath = [searchStringPath stringByAppendingString:path];
+        NSString *searchString = [NSString stringWithFormat:@"search-->%@\n",searchStringPath];
         dispatch_async(dispatch_get_main_queue(), ^{
-            console.string = [console.string stringByAppendingString:searchString];
-            [console scrollLineDown:nil];
+            NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:searchString];
+            [console.textStorage appendAttributedString:attributedString];
+            [console scrollRangeToVisible:NSMakeRange([[console string] length],0)];
         });
     }
     

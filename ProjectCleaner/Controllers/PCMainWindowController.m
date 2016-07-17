@@ -117,7 +117,6 @@ static NSString *const kPcSearchCommand   = @"pc search";
 
 - (void)initConsoleTextView{
     self.consoleLogTextView.delegate = self;
-    self.consoleLogTextView.string  = @"hello world";
 }
 
 - (void)initIndicatorView{

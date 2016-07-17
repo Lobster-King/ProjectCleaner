@@ -21,4 +21,6 @@
 
 + (NSString *)timeStampString;
 
++ (NSString *)currentWindowPath;
+
 @end

@@ -23,13 +23,24 @@ static NSString *const kWorkspaceWindowControllers   = @"workspaceWindowControll
     NSArray *workspaceWindowControllers = [NSClassFromString(kIDEWorkspaceWindowController) valueForKey:kWorkspaceWindowControllers];
     id workSpace;
     for (id controller in workspaceWindowControllers) {
-        if ([[controller valueForKey:kWindow] isEqual:[NSApp keyWindow]]) {
+//         if ([[controller valueForKey:@"window"] isKeyWindow]) {
             workSpace = [controller valueForKey:kWorkspace];
-            break;
-        }
+//         }
     }
     NSString *workspacePath = [[[workSpace valueForKey:kRepresentingFilePath] valueForKey:kParentPath] valueForKey:kPathString];
+    NSLog(@"plugin log workspacepath->%@",workspacePath);
     return workspacePath;
+}
+
++ (NSString *)currentWindowPath{
+    NSWindowController *currentWindowController = [[NSApp keyWindow] windowController];
+    if ([currentWindowController isKindOfClass:NSClassFromString(@"IDEWorkspaceWindowController")]) {
+       id workSpace = [currentWindowController valueForKey:kWorkspace];
+        NSString *workspacePath = [[[workSpace valueForKey:kRepresentingFilePath] valueForKey:kParentPath] valueForKey:kPathString];
+        NSLog(@"plugin log workspacepath->%@",workspacePath);
+        return workspacePath;
+    }
+    return nil;
 }
 
 + (NSString *)projectWorkSpace{
