@@ -57,7 +57,7 @@ static NSString *const kFindLaunchPath  = @"/usr/bin/find";
     while (((path = [enumerator nextObject])))
     {
         //none retain png
-        if (![path hasSuffix:@"@2x.png"] && ![path hasSuffix:@"@3x.png"]) {
+        if (![path hasSuffix:@"@2x.png"] && ![path hasSuffix:@"@3x.png"] && [path hasSuffix:@".png"]) {
             NSString *deleteStringPath = [[PCUtils projectPath] stringByAppendingString:@"/"];
             deleteStringPath = [deleteStringPath stringByAppendingString:path];
             NSString *deleteString = [NSString stringWithFormat:@"delete-->%@\n",deleteStringPath];
