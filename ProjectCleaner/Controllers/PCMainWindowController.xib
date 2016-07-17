@@ -362,7 +362,7 @@
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" tag="50001" translatesAutoresizingMaskIntoConstraints="NO" id="88Y-4I-Knd">
                         <rect key="frame" x="128" y="411" width="374" height="22"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="You can use &quot;|&quot; to separate muti directories (like .png|.jpg)." drawsBackground="YES" id="o7e-tw-Lsy">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="You can use &quot;|&quot; to separate muti files (like .png|.jpg)." drawsBackground="YES" id="o7e-tw-Lsy">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -378,7 +378,7 @@
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" tag="50002" translatesAutoresizingMaskIntoConstraints="NO" id="EoE-7W-mna">
                         <rect key="frame" x="128" y="296" width="374" height="22"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="You can use &quot;|&quot; to separate muti directories (like .png|.jpg)." drawsBackground="YES" id="pKv-AS-Kcf">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="You can use &quot;|&quot; to separate muti files (like .png|.jpg)." drawsBackground="YES" id="pKv-AS-Kcf">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

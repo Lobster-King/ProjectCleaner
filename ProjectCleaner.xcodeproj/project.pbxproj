@@ -16,13 +16,14 @@
 		648088821D2CD2730045793A /* PCMainTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 648088811D2CD2730045793A /* PCMainTableViewDelegate.m */; };
 		648088881D2CE6CF0045793A /* PCFuncitons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 648088871D2CE6CF0045793A /* PCFuncitons.plist */; };
 		BA35540F1D39DFCE00E2DB04 /* PCDeleteTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA35540E1D39DFCE00E2DB04 /* PCDeleteTaskExecutor.m */; };
-		BA3554121D39E05D00E2DB04 /* PCSearchTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3554111D39E05D00E2DB04 /* PCSearchTaskExecutor.m */; };
+		BA3554121D39E05D00E2DB04 /* PCSearchTaskExecutor.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA3554111D39E05D00E2DB04 /* PCSearchTaskExecutor.mm */; };
 		BA3554151D39E6EB00E2DB04 /* PCTaskStatusMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3554141D39E6EB00E2DB04 /* PCTaskStatusMachine.m */; };
 		BA3554181D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3554171D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.m */; };
 		BA35541B1D39FAB100E2DB04 /* PCOpenDrivingDataTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA35541A1D39FAB100E2DB04 /* PCOpenDrivingDataTaskExecutor.m */; };
 		BA35541E1D39FAE900E2DB04 /* PCDeleteDocumentTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA35541D1D39FAE900E2DB04 /* PCDeleteDocumentTaskExecutor.m */; };
 		BA3554211D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3554201D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.m */; };
 		BA3554241D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3554231D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.m */; };
+		BA4516511D3BAD840088A243 /* PCTextHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA45164F1D3BAD840088A243 /* PCTextHelper.cpp */; };
 		BA77315E1D39101A00464411 /* PCConsoleLogHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BA77315D1D39101A00464411 /* PCConsoleLogHandler.m */; };
 		BA7731651D392B9600464411 /* PCCommandParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7731641D392B9600464411 /* PCCommandParser.m */; };
 		BA7731671D392CBF00464411 /* PCCommands.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA7731661D392CBF00464411 /* PCCommands.plist */; };
@@ -50,7 +51,7 @@
 		BA35540D1D39DFCE00E2DB04 /* PCDeleteTaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDeleteTaskExecutor.h; sourceTree = "<group>"; };
 		BA35540E1D39DFCE00E2DB04 /* PCDeleteTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDeleteTaskExecutor.m; sourceTree = "<group>"; };
 		BA3554101D39E05D00E2DB04 /* PCSearchTaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCSearchTaskExecutor.h; sourceTree = "<group>"; };
-		BA3554111D39E05D00E2DB04 /* PCSearchTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCSearchTaskExecutor.m; sourceTree = "<group>"; };
+		BA3554111D39E05D00E2DB04 /* PCSearchTaskExecutor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PCSearchTaskExecutor.mm; sourceTree = "<group>"; };
 		BA3554131D39E6EB00E2DB04 /* PCTaskStatusMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCTaskStatusMachine.h; sourceTree = "<group>"; };
 		BA3554141D39E6EB00E2DB04 /* PCTaskStatusMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCTaskStatusMachine.m; sourceTree = "<group>"; };
 		BA3554161D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCOpenDocumentTaskExecutor.h; sourceTree = "<group>"; };
@@ -63,6 +64,8 @@
 		BA3554201D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDeleteDrivingDataTaskExecutor.m; sourceTree = "<group>"; };
 		BA3554221D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCClearConsoleTaskExecutor.h; sourceTree = "<group>"; };
 		BA3554231D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCClearConsoleTaskExecutor.m; sourceTree = "<group>"; };
+		BA45164F1D3BAD840088A243 /* PCTextHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PCTextHelper.cpp; sourceTree = "<group>"; };
+		BA4516501D3BAD840088A243 /* PCTextHelper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PCTextHelper.hpp; sourceTree = "<group>"; };
 		BA77315C1D39101A00464411 /* PCConsoleLogHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCConsoleLogHandler.h; sourceTree = "<group>"; };
 		BA77315D1D39101A00464411 /* PCConsoleLogHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCConsoleLogHandler.m; sourceTree = "<group>"; };
 		BA7731621D39108600464411 /* PCTaskExecuteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCTaskExecuteProtocol.h; sourceTree = "<group>"; };
@@ -151,7 +154,7 @@
 				BA35540D1D39DFCE00E2DB04 /* PCDeleteTaskExecutor.h */,
 				BA35540E1D39DFCE00E2DB04 /* PCDeleteTaskExecutor.m */,
 				BA3554101D39E05D00E2DB04 /* PCSearchTaskExecutor.h */,
-				BA3554111D39E05D00E2DB04 /* PCSearchTaskExecutor.m */,
+				BA3554111D39E05D00E2DB04 /* PCSearchTaskExecutor.mm */,
 				BA3554161D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.h */,
 				BA3554171D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.m */,
 				BA3554191D39FAB100E2DB04 /* PCOpenDrivingDataTaskExecutor.h */,
@@ -162,6 +165,8 @@
 				BA3554201D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.m */,
 				BA3554221D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.h */,
 				BA3554231D39FB1D00E2DB04 /* PCClearConsoleTaskExecutor.m */,
+				BA45164F1D3BAD840088A243 /* PCTextHelper.cpp */,
+				BA4516501D3BAD840088A243 /* PCTextHelper.hpp */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,7 +280,7 @@
 			files = (
 				BA35541B1D39FAB100E2DB04 /* PCOpenDrivingDataTaskExecutor.m in Sources */,
 				BAC50EC11D2D51E2006ACD85 /* PCUtils.m in Sources */,
-				BA3554121D39E05D00E2DB04 /* PCSearchTaskExecutor.m in Sources */,
+				BA3554121D39E05D00E2DB04 /* PCSearchTaskExecutor.mm in Sources */,
 				BA3554211D39FAFE00E2DB04 /* PCDeleteDrivingDataTaskExecutor.m in Sources */,
 				BA3554181D39FA9800E2DB04 /* PCOpenDocumentTaskExecutor.m in Sources */,
 				641D888E1D2CB5C200CA5965 /* ProjectCleaner.m in Sources */,
@@ -289,6 +294,7 @@
 				648088821D2CD2730045793A /* PCMainTableViewDelegate.m in Sources */,
 				BA77315E1D39101A00464411 /* PCConsoleLogHandler.m in Sources */,
 				64366BE21D38E4EB000363F1 /* NSMutableString+PCSemanticParsing.m in Sources */,
+				BA4516511D3BAD840088A243 /* PCTextHelper.cpp in Sources */,
 				64366BDF1D38DBC4000363F1 /* NSView+PCUserInteraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
