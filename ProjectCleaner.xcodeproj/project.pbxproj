@@ -28,6 +28,7 @@
 		BA7731651D392B9600464411 /* PCCommandParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7731641D392B9600464411 /* PCCommandParser.m */; };
 		BA7731671D392CBF00464411 /* PCCommands.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA7731661D392CBF00464411 /* PCCommands.plist */; };
 		BA77316A1D3935D600464411 /* PCHelpTaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7731691D3935D600464411 /* PCHelpTaskExecutor.m */; };
+		BA8D94F71D3D17B2006E9C3E /* install.sh in Resources */ = {isa = PBXBuildFile; fileRef = BA8D94F61D3D17B2006E9C3E /* install.sh */; };
 		BAC50EC11D2D51E2006ACD85 /* PCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC50EC01D2D51E2006ACD85 /* PCUtils.m */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		BA7731661D392CBF00464411 /* PCCommands.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PCCommands.plist; sourceTree = "<group>"; };
 		BA7731681D3935D600464411 /* PCHelpTaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHelpTaskExecutor.h; sourceTree = "<group>"; };
 		BA7731691D3935D600464411 /* PCHelpTaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHelpTaskExecutor.m; sourceTree = "<group>"; };
+		BA8D94F61D3D17B2006E9C3E /* install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		BAC50EBF1D2D51E2006ACD85 /* PCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCUtils.h; sourceTree = "<group>"; };
 		BAC50EC01D2D51E2006ACD85 /* PCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 				641D888D1D2CB5C200CA5965 /* ProjectCleaner.m */,
 				641D888F1D2CB5C200CA5965 /* Info.plist */,
 				641D88891D2CB5C200CA5965 /* Supporting Files */,
+				BA8D94F61D3D17B2006E9C3E /* install.sh */,
 			);
 			path = ProjectCleaner;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				641D888B1D2CB5C200CA5965 /* ProjectCleaner.xcscheme in Resources */,
 				641D88A51D2CBF0800CA5965 /* PCMainWindowController.xib in Resources */,
 				BA7731671D392CBF00464411 /* PCCommands.plist in Resources */,
+				BA8D94F71D3D17B2006E9C3E /* install.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
