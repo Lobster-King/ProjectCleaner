@@ -84,7 +84,7 @@
         NSArray *imageNameArray = nil;
         if ((imageNameArray = [relativeImageName componentsSeparatedByString:@"@2x."])) {
             relativeImageName = imageNameArray[0];
-        }else if ((imageNameArray = [relativeImageName componentsSeparatedByString:@"@3."])){
+        }else if ((imageNameArray = [relativeImageName componentsSeparatedByString:@"@3x."])){
             relativeImageName = imageNameArray[0];
         }else if ((imageNameArray = [relativeImageName componentsSeparatedByString:@"."])){
             relativeImageName = imageNameArray[0];
