@@ -1,16 +1,9 @@
-//
-//  install.sh
-//  ProjectCleaner
-//
-//  Created by qinzhiwei on 16/7/18.
-//  Copyright © 2016年 lobster. All rights reserved.
-//
 
 #!/bin/bash
 
 set -euo pipefail
 
-DOWNLOAD_URI=https://github.com/Lobster-King/ProjectCleaner/archive/v.1.0.0.tar.gz
+DOWNLOAD_URI=hhttps://github.com/Lobster-King/ProjectCleaner/files/369255/ProjectCleaner.xcplugin.zip
 PLUGINS_DIR="${HOME}/Library/Application Support/Developer/Shared/Xcode/Plug-ins"
 XCODE_VERSION="$(xcrun xcodebuild -version | head -n1 | awk '{ print $2 }')"
 PLIST_PLUGINS_KEY="DVTPlugInManagerNonApplePlugIns-Xcode-${XCODE_VERSION}"
