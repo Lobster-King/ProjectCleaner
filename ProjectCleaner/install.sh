@@ -3,7 +3,7 @@
 
 set -euo pipefail
 
-DOWNLOAD_URI=https://github.com/Lobster-King/ProjectCleaner/files/369255/ProjectCleaner.xcplugin.zip
+DOWNLOAD_URI=https://github.com/Lobster-King/ProjectCleaner/files/369283/ProjectCleaner.xcplugin.zip
 PLUGINS_DIR="${HOME}/Library/Application Support/Developer/Shared/Xcode/Plug-ins"
 XCODE_VERSION="$(xcrun xcodebuild -version | head -n1 | awk '{ print $2 }')"
 PLIST_PLUGINS_KEY="DVTPlugInManagerNonApplePlugIns-Xcode-${XCODE_VERSION}"
