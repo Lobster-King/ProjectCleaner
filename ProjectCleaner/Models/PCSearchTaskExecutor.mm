@@ -51,14 +51,16 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         task.status = PCStatusMachineTaskExecuting;
     });
+    
     NSString *path = nil;
-    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:[PCUtils projectPath]];
+    NSString *dirtory = [PCUtils projectPath];
+    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:dirtory];
     
     NSMutableArray *imagePathArray = [NSMutableArray new];
     NSMutableArray *searchPathArray= [NSMutableArray new];
     while (((path = [enumerator nextObject])))
     {
-        NSString *searchStringPath = [[PCUtils projectPath] stringByAppendingString:@"/"];
+        NSString *searchStringPath = [dirtory stringByAppendingString:@"/"];
         searchStringPath = [searchStringPath stringByAppendingString:path];
         for (NSString *reg in self.unusedOptions) {
             if ([searchStringPath hasSuffix:reg]) {
@@ -74,31 +76,29 @@
     }
     
     for (NSString *imagePath in imagePathArray) {
-//        NSString *imageName = [path lastPathComponent];
-//        NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:@"[_-].*\\d.*.png" options:NSRegularExpressionCaseInsensitive error:nil];
-//        NSString *newImageName = [regular stringByReplacingMatchesInString:imageName options:NSMatchingReportProgress range:NSMakeRange(0, [imageName length]) withTemplate:@""];
-//        if (newImageName) {
-//            
-//        }
         NSString *relativeImageName = [imagePath lastPathComponent];
-        NSArray *imageNameArray = nil;
-        if ((imageNameArray = [relativeImageName componentsSeparatedByString:@"@2x."])) {
-            relativeImageName = imageNameArray[0];
-        }else if ((imageNameArray = [relativeImageName componentsSeparatedByString:@"@3x."])){
-            relativeImageName = imageNameArray[0];
-        }else if ((imageNameArray = [relativeImageName componentsSeparatedByString:@"."])){
-            relativeImageName = imageNameArray[0];
+        NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:@"[_-].*\\d.*.png" options:NSRegularExpressionCaseInsensitive error:nil];
+        NSString *newImageName = [regular stringByReplacingMatchesInString:relativeImageName options:NSMatchingReportProgress range:NSMakeRange(0, [relativeImageName length]) withTemplate:@""];
+        if (newImageName) {
+            relativeImageName = newImageName;
         }
         
+        NSArray *imageNameArray = nil;
+        imageNameArray = [relativeImageName componentsSeparatedByString:@"@3x."];
+        if (imageNameArray.count <= 1) {
+            imageNameArray = [relativeImageName componentsSeparatedByString:@"@2x."];
+            if (imageNameArray.count <= 1) {
+                imageNameArray = [relativeImageName componentsSeparatedByString:@"."];
+            }
+        }
+        relativeImageName = imageNameArray[0];
         BOOL isIn = NO;
         
         for (NSString *searchPath in searchPathArray) {
-            
             if (isTextInFile([searchPath UTF8String], [relativeImageName UTF8String])) {
                 isIn = YES;
                 break;
             }
-            
         }
         
         if (!isIn) {
@@ -109,19 +109,6 @@
                 [console scrollRangeToVisible:NSMakeRange([[console string] length],0)];
             });
         }
-//        
-//        NSString *searchStringPath = [[PCUtils projectPath] stringByAppendingString:@"/"];
-//        searchStringPath = [searchStringPath stringByAppendingString:path];
-//        
-//        if(isTextInFile([searchStringPath UTF8String], "SenderTextNodeBkg")){
-//            NSString *searchString = [NSString stringWithFormat:@"search-->%@\n",searchStringPath];
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:searchString];
-//                [console.textStorage appendAttributedString:attributedString];
-//                [console scrollRangeToVisible:NSMakeRange([[console string] length],0)];
-//            });
-//        }
-
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
