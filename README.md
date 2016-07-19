@@ -4,12 +4,12 @@ Have you ever wanted to chect out unused files like .png .gif that old project n
 
 Have you ever wanted to delete those files automatic ?
 
-By using ProjectCleaner ,you can do this easily .
+By using ProjectCleaner,you can do this easily .
 
 
 ### Installation
 
-Installation: You can clone or just download the project, then open project with Xcode, 
+You can clone or just download the project, then open project with Xcode, 
 build and run project, and finally restart Xcode to active plugin.
 
 ### Alcatraz
