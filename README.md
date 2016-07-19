@@ -29,6 +29,6 @@ etc
 ### More information
 You can contact me by
 
-Email:win_cooperation@163.com
+Email:zhiwei.geek@gmail.com
 
 QQ:774980478
