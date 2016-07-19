@@ -21,7 +21,6 @@ static NSString *const kKvoKeyPath      = @"status";
 @interface PCCommandParser()
 
 @property (nonatomic, retain)NSDictionary *cmdMap;
-@property (nonatomic, retain)NSOperationQueue *operationQueue;
 @property (nonatomic, retain)PCTaskStatusMachine *statusMachine;
 
 @end

@@ -90,12 +90,12 @@ static ProjectCleaner *sharedPlugin;
     [[self.mainWindow window] makeKeyAndOrderFront:self.mainWindow];
 }
 
-//#pragma mark-- Getters & Setters--
-//- (PCMainWindowController *)mainWindow{
-//    if (!_mainWindow) {
-//        _mainWindow = [PCMainWindowController new];
-//    }
-//    return _mainWindow;
-//}
+#pragma mark-- Getters & Setters--
+- (PCMainWindowController *)mainWindow{
+    if (!_mainWindow) {
+        _mainWindow = [PCMainWindowController new];
+    }
+    return _mainWindow;
+}
 
 @end

@@ -19,6 +19,7 @@
 @interface PCCommandParser : NSObject
 
 @property (nonatomic, weak)id <CommandParserDelegate>delegate;
+@property (nonatomic, retain)NSOperationQueue *operationQueue;
 @property (nonatomic, retain)NSArray *searchOptions;
 @property (nonatomic, retain)NSArray *deleteOptions;
 @property (nonatomic, retain)NSArray *unusedOptions;

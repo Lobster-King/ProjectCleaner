@@ -29,7 +29,7 @@ static NSString *const kExecutErrorString = @"error";
 static NSString *const kPcDeleteCommand   = @"pc delete";
 static NSString *const kPcSearchCommand   = @"pc search";
 
-@interface PCMainWindowController ()<NSTextFieldDelegate,NSTextViewDelegate,CommandParserDelegate>
+@interface PCMainWindowController ()<NSTextFieldDelegate,NSTextViewDelegate,CommandParserDelegate,NSWindowDelegate>
 
 @property (nonatomic, retain)PCMainTableViewDelegate *tableViewDelegate;
 
@@ -72,6 +72,7 @@ static NSString *const kPcSearchCommand   = @"pc search";
     [self initConsoleLogCheckButton];
     [self initConsoleTextView];
     [self initIndicatorView];
+    self.window.delegate = self;
     self.searchOptionsTextField.delegate = self;
     self.deleteOptionsTextField.delegate = self;
     self.unusedOptionsTextField.delegate = self;
@@ -125,6 +126,11 @@ static NSString *const kPcSearchCommand   = @"pc search";
 }
 
 #pragma mark--Delegates & Actions--
+- (BOOL)windowShouldClose:(id)sender{
+    self.consoleLogTextView.string = @"";
+    [[PCCommandParser sharedParser] setOperationQueue:nil];
+    return YES;
+}
 - (void)cmdExecutingStaus:(PCStatusMachine)status{
     self.indicator.hidden = NO;
     self.statusLabel.hidden = NO;
