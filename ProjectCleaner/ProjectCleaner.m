@@ -46,7 +46,7 @@ static ProjectCleaner *sharedPlugin;
                                                      selector:@selector(applicationDidFinishLaunching:)
                                                          name:NSApplicationDidFinishLaunchingNotification
                                                        object:nil];
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNorification:) name:nil object:nil];
+//            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNorification:) name:nil object:nil];
         } else {
             [self initializeAndLog];
         }

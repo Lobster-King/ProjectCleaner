@@ -16,12 +16,20 @@ static NSString *const kPathString                   = @"_pathString";
 static NSString *const kRepresentingFilePath         = @"representingFilePath";
 static NSString *const kIDEWorkspaceWindowController = @"IDEWorkspaceWindowController";
 static NSString *const kWorkspaceWindowControllers   = @"workspaceWindowControllers";
+static NSString *const kWindowDelegate               = @"_delegate";
 
 @implementation PCUtils
 
 + (NSString *)projectPath{
 
-    NSWindow *win = [NSApp keyWindow];
+    NSArray *windows = [NSApp orderedWindows];
+    if(windows.count > 1){
+        id workSpaceWindow = windows[1];
+        id workSpaceContoller = [workSpaceWindow valueForKey:kWindowDelegate];
+        id workSpace = [workSpaceContoller valueForKey:kWorkspace];
+        NSString *workspacePath = [[[workSpace valueForKey:kRepresentingFilePath] valueForKey:kParentPath] valueForKey:kPathString];
+        return workspacePath;
+    }
     
     NSArray *workspaceWindowControllers = [NSClassFromString(kIDEWorkspaceWindowController) valueForKey:kWorkspaceWindowControllers];
     id workSpace;
