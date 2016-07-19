@@ -20,6 +20,9 @@ static NSString *const kWorkspaceWindowControllers   = @"workspaceWindowControll
 @implementation PCUtils
 
 + (NSString *)projectPath{
+
+    NSWindow *win = [NSApp keyWindow];
+    
     NSArray *workspaceWindowControllers = [NSClassFromString(kIDEWorkspaceWindowController) valueForKey:kWorkspaceWindowControllers];
     id workSpace;
     for (id controller in workspaceWindowControllers) {

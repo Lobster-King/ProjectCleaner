@@ -131,6 +131,7 @@ static NSString *const kPcSearchCommand   = @"pc search";
     [[PCCommandParser sharedParser] setOperationQueue:nil];
     return YES;
 }
+
 - (void)cmdExecutingStaus:(PCStatusMachine)status{
     self.indicator.hidden = NO;
     self.statusLabel.hidden = NO;

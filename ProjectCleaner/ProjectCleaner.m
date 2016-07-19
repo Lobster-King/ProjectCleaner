@@ -8,6 +8,7 @@
 
 #import "ProjectCleaner.h"
 #import "PCMainWindowController.h"
+#import "PCUtils.h"
 
 static ProjectCleaner *sharedPlugin;
 
@@ -45,6 +46,7 @@ static ProjectCleaner *sharedPlugin;
                                                      selector:@selector(applicationDidFinishLaunching:)
                                                          name:NSApplicationDidFinishLaunchingNotification
                                                        object:nil];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNorification:) name:nil object:nil];
         } else {
             [self initializeAndLog];
         }
@@ -88,6 +90,13 @@ static ProjectCleaner *sharedPlugin;
 - (void)showMainWindow{
     self.mainWindow = [PCMainWindowController new];
     [[self.mainWindow window] makeKeyAndOrderFront:self.mainWindow];
+}
+
+- (void)handleNorification:(NSNotification *)notification{
+    if ([notification.name isEqualToString:@"IDESourceControlIDEDidUpdateLocalStatusNotification"]) {
+        
+    }
+    NSLog(@"xcode event--> %@",notification.name);
 }
 
 #pragma mark-- Getters & Setters--
