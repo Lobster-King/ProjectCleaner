@@ -1,6 +1,6 @@
 ## ProjectCleaner
 
-Have you ever wanted to chect out unused files like .png .gif that old project not refer ?
+Have you ever wanted to check out unused files like .png .gif that old project not refer ?
 
 Have you ever wanted to delete those files automatic ?
 
