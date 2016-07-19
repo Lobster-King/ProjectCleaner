@@ -16,6 +16,9 @@ build and run project, and finally restart Xcode to active plugin.
 
 Will be supported soon.
 
+### Usage
+
+Open target project ->Window->ProjectCleaner
 
 ### Todo List
 This plugin is still in a very early stage, here is a TODO list to show you a simple roadmap.
