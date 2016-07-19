@@ -19,6 +19,7 @@ Will be supported soon.
 ### Usage
 
 Open target project ->Window->ProjectCleaner
+![](https://github.com/Lobster-King/ProjectCleaner/blob/master/ProjectCleaner/search_usage.gif)
 
 ### Todo List
 This plugin is still in a very early stage, here is a TODO list to show you a simple roadmap.
