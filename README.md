@@ -20,7 +20,7 @@ build and run project, and finally restart Xcode to active plugin.
 
 ### Alcatraz
 
-Will be supported soon.
+This plugin can also be installed using Alcatraz. Just search for ProjectCleaner in Alcatraz.
 
 ### Usage
 
