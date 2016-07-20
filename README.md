@@ -9,7 +9,13 @@ By using ProjectCleaner,you can do this easily .
 
 ### Installation
 
-You can clone or just download the project, then open project with Xcode, 
+To install, open up your terminal and paste this:
+
+``` bash
+curl -k https://raw.githubusercontent.com/Lobster-King/ProjectCleaner/master/ProjectCleaner/install.sh | sh
+```
+
+You also can clone or just download the project, then open project with Xcode, 
 build and run project, and finally restart Xcode to active plugin.
 
 ### Alcatraz
