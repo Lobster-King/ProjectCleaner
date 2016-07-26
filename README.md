@@ -16,6 +16,10 @@ build and run project, and finally restart Xcode to active plugin.
 
 Will be supported soon.
 
+### Warning
+
+ProjectCleaner may have problems in release mode . so you can download it and run it by yourself .
+
 ### Usage
 
 Open target project ->Window->ProjectCleaner
