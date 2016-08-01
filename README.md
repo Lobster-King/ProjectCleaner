@@ -18,7 +18,7 @@ Will be supported soon.
 
 ### Warning
 
-ProjectCleaner may have problems in release mode . so you can download it and run it by yourself .
+ProjectCleaner may have problems in release mode . so you can download it and run it by yourself .－>restart xcode.
 
 ### Usage
 
